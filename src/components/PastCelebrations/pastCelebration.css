@@ -1,0 +1,53 @@
+.pastCel{
+    display: flex;
+    margin-top:20px;    
+    justify-content: space-between; 
+    
+}
+.pastCel .celebLink{
+    float:right;
+}
+.pastLink{
+    text-decoration: none;
+}
+.pheading{
+    font-size: 30px;
+    font-weight: 600;
+    color:black;
+    margin-top:80px;
+    margin-bottom:50px;
+
+}
+.pastCelImage{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius:100%;
+    
+}
+.imgDiv{
+    width:90px;
+    height:90px;
+    border-radius:100%;  
+}
+.ForAlign{
+    display: flex;
+    align-items: center;
+    padding:10px 0 10px 0;
+}
+.celebTitle{
+    font-weight: 800;
+    color:black;
+    margin-left:-60px;
+    text-align: left;
+    
+}
+.pastCel .celebLink{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.bi-chevron-right{    
+    color:black !important;
+    font-weight: 900 !important;
+}

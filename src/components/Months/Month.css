@@ -1,0 +1,37 @@
+.new{
+    margin-left:10%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 39px;
+    overflow-x:scroll;   
+    height:150px;
+    
+}
+.new::-webkit-scrollbar {
+    display: none;
+}
+.new {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+.myMon{
+    display: flex;
+    flex-direction: row;
+    width:100vh;
+    gap:10px;
+    
+}
+
+.monthBtn{ 
+    color: black !important;
+    padding:5px 40px !important;    
+    font-weight: 500 !important;
+}
+
+
+.high{
+    background-color:#ffc107;
+    color: black !important;
+    padding:5px 40px !important;
+}

@@ -1,0 +1,36 @@
+
+.mycontainer{
+   width:15%;
+   min-height: 230vh;
+   max-height: 150vh;
+   
+    /* height:100vh;  */
+    padding:25px;
+    padding-top:15%;
+    background-color:#4E176C;
+    color:white ;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 60px;
+    float:left;
+}
+
+.myh:hover,
+.myh:hover ~ .myh,
+.myh:hover + .title,
+.mycontainer + .title
+.myh:hover i
+{
+    color:#F8C000;
+}
+
+
+.homecontainer{
+    position:fixed;
+}
+.title{
+    margin-left : 20px;
+}
+

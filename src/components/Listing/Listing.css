@@ -1,0 +1,80 @@
+
+.myListingcontainer{
+    width:50%;
+    float:left;
+    margin-right:1%;
+    background-color: #F6F6F6;
+    min-height: 100vh;
+    
+    
+}
+
+.text{
+    display: flex;
+    justify-content:space-between;
+    color:black !important;
+}
+
+.bi-arrow-right-short{
+  
+    border-radius:100%;
+    border: none !important;;
+    font-size:25px;
+
+}
+
+
+
+
+.myCard{      
+    width:90%;
+    margin:5%;
+    height:278px !important;
+    background-color: #FFFFFF !important;
+    box-shadow:10px 10px 10px rgba(128, 128, 128, 0.171);
+    padding:18px;
+    color:black !important;
+}
+
+.cardBody{
+    padding:40px !important;
+    top:0;
+    position:absolute;
+    right:0;
+    float:right !important;
+    width: 70%;
+    margin-left:auto;
+    
+    
+}
+.cardText{
+    font-size:20px;    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      
+}
+.cardimg{
+    width:30%;
+    height:88%;
+    margin-top:19px;
+    padding-left:15px;
+    /* padding:20px 0px 20px 20px; */
+
+}
+.icon{
+    width:32px;
+    height:32px;
+    border-radius:100%;
+    background-color:gold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.icon:hover{
+    box-shadow:2px 2px 4px  grey;
+    border-radius:100%;
+    transform:scale(1.1)
+    }

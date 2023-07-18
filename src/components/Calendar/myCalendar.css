@@ -1,0 +1,109 @@
+.myCalendarcontainer {
+   display:grid;
+   grid-template-columns: repeat(7,minmax(75px,75px));
+   grid-template-rows:repeat(5, minmax(30px,50px));   
+   font-weight: 600;
+  }
+  .table ul{
+    list-style: none;
+    display:grid;
+    grid-template-columns: repeat(7,minmax(75px,75px)); 
+    padding-left:0
+    
+  }
+  .table ul li{
+   font-weight: 600;
+      
+  }
+  .myCalCont{
+    margin-top:22px;    
+    float:right;    
+  }
+  .highlight{
+    background-color:#4E176C!important;
+    border-radius:100%;
+    color:white !important;
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:20%;
+    font-size:19px;
+  }
+  
+  .monthdisplay{
+    display:flex;
+    justify-content:space-between;
+  }
+  .left,.right{
+    font-size:1rem;
+    cursor:pointer;
+    margin-left:-20%;
+    font-weight: 800 !important;
+  }
+  .left{
+    margin-left:-21px;
+  }
+  .monthdisplay h2{
+    font-size:11px !important;
+  }
+  .calHead{
+    margin-bottom:30px;    
+  } 
+
+  /* .calendar {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .weekday {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .day-number {
+    font-size: 18px;
+  }
+  
+  .day-name {
+    font-size: 14px;
+    color: #888;
+  }
+   */
