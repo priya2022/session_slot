@@ -70,7 +70,7 @@ const Month = () => {
      
    }
 
-  const myMonthData = {monthData:data,monthDays:days }
+  const myMonthData = {monthDays:days }
 
 
   

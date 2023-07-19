@@ -61,20 +61,10 @@
     height:88%;
     margin-top:19px;
     padding-left:15px;
+    font-size:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* padding:20px 0px 20px 20px; */
 
 }
-.icon{
-    width:32px;
-    height:32px;
-    border-radius:100%;
-    background-color:gold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.icon:hover{
-    box-shadow:2px 2px 4px  grey;
-    border-radius:100%;
-    transform:scale(1.1)
-    }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import { Link } from 'react-router-dom'
 
 
 
@@ -8,19 +9,31 @@ const Home = () => {
     <>
     <div className='mycontainer'>
       <div className="homecontainer">
-      <div> <span className="myh">
-        <i class="bi bi-emoji-smile myColor"></i></span> 
-        <span  className="myh title">Celebration</span>
-        </div>
+
+      <Link to='/'  className="myLink">
+        <span className="myh">
+        <i class="bi bi-emoji-smile myColor"></i></span>
+        <span  className="myh title">Sessions</span>
+        </Link>
+       
+     
+      <Link to='/projects'  className="myLink">
+
         <div> <span className="myh">
         <i class="bi bi-hand-thumbs-up myColor"></i>
         </span>
-         <span  className="myh title">Challenges</span>
+         <span  className="myh title">Projects</span>
          </div>
-      <div> <span className="myh">
-        <i class="bi bi-lightbulb myColor"></i></span>
-         <span  className="myh title">Feature Work</span>
+        </Link>
+
+      <Link to='/savedProjects'  className="myLink">
+          <div> <span className="myh">
+          <i class="bi bi-lightbulb myColor"></i></span>
+         <span  className="myh title">Saved Projects</span>
          </div>
+        </Link>
+
+
          </div>
     </div>
 

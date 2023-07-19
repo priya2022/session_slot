@@ -1,0 +1,99 @@
+.easy{
+    border:1px solid rgba(250, 172, 63, 1)!important;
+}
+.medium{
+    border:1px solid rgba(6, 63, 209, 1)!important;
+}
+.hard{
+    border:1px solid rgba(244, 95, 127, 1)!important;
+}
+.easy:hover{
+    background-color:rgba(250, 172, 63, 1)!important;
+}
+.medium:hover{
+    background-color:rgba(6, 63, 209, 1)!important;
+}
+.hard:hover{
+    background-color:rgba(244, 95, 127, 1)!important;
+}
+.general{
+    color:black !important;
+    margin:10px 10px;
+    margin-bottom:20px;
+    background-color:white !important;
+    padding:13px 48px!important;
+}
+.easy:hover,.medium:hover, .hard:hover{
+    color:white !important;
+}
+.challengesStyle{
+    position: relative;
+    width:280px;
+    height:220px;
+    margin: 10px 20px;
+    box-shadow: 10px 10px 5px solid grey !important;
+}
+.challengesStyle Button{
+    position: absolute;
+    bottom:0;
+    right:0;
+    color:black;
+    width:100%;
+    cursor:pointer;
+}
+.HARD{
+    background-color:rgba(244, 95, 127, 0.2) !important;
+    color:black !important;
+}
+.EASY{
+    background-color:rgba(250, 172, 63, 0.2) !important;
+    color:black !important;
+}
+.MEDIUM{
+    background-color:rgba(6, 63, 209, 0.2) !important;
+    color:black !important;
+    border:none !important; 
+
+    
+}
+.ChallButton{
+    border:none
+}
+.designCC{
+    position: relative;
+    margin:20px 0px;
+    width:280px;
+    height:220px;
+}
+.designCC Button{
+    position:absolute;
+    bottom:0;
+    right:0;    
+    Width: 180px;
+    Height: 72px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 10px
+
+    }
+    .desMedium{
+        background-color:rgba(6, 63, 209, 0.2)!important;
+        color:black;   
+        border:none !important; 
+    }
+    .desEasy{
+        background-color:rgba(250, 172, 63, 0.2)!important;
+        color:black;    
+    }
+    .desHard{
+        background-color:rgba(244, 95, 127, 0.2)!important;
+        color:black;    
+    }
+    .desMedium:hover,.desHard:hover,.desEasy:hover{
+      
+        color:black;    
+    }
+    .desMedium,.desHard,.desEasy{
+      
+        border:none;    
+    }
+    
