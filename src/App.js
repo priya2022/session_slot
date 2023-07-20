@@ -11,7 +11,7 @@ const App = () => {
 
     
     <div>
-    {/* <Home />     */}
+    <Home />    
     <Weeks />
     </div>
     </>

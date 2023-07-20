@@ -8,12 +8,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from 'react-redux'
 import BookingReducer from './Features/slotBooking'
 import BookedReducer from './Features/Booked'
+import UserReducer from './Features/User'
 
 const store = configureStore({
     reducer:{
         perDaySlot:DaySlotReducer,
         booking:BookingReducer,
-        booked:BookedReducer
+        booked:BookedReducer,
+        user:UserReducer,
     }
 })
 const root = ReactDOM.createRoot(document.getElementById('root'));

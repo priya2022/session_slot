@@ -39,42 +39,47 @@ const Month = () => {
           const day = nextDay.getDate();
           const dayOfWeek = nextDay.toLocaleString('en-US', { weekday: 'long' });
           if (nextDay.getDay() !== 0) {
+            
             const additionalInfo =[
                 {
                   "id":"1",
                   "timings":"10a.m-11a.m",
                   "count":15,
                    "date":day,
-                   "dayOfWeek":dayOfWeek
-                  
+                   "dayOfWeek":dayOfWeek,
+                  //  "users":[]
                 },
                 {
                   "id":"2",
                   "timings":"11a.m-12p.m",
                   "count":15,
                     "date":day,
-                   "dayOfWeek":dayOfWeek
+                   "dayOfWeek":dayOfWeek,
+                  //  "users":[]
                 },
                 {
                   "id":"3",
                   "timings":"3p.m-4p.m",
                   "count":15,
                     "date":day,
-                   "dayOfWeek":dayOfWeek
+                   "dayOfWeek":dayOfWeek,
+                  //  "users":[]
                 },
                 {
                   "id":"4",
                   "timings":"4p.m-5p.m",
                   "count":15,
                     "date":day,
-                   "dayOfWeek":dayOfWeek
+                   "dayOfWeek":dayOfWeek,
+                  //  "users":[]
                 },
                 {
                   "id":"5",
                   "timings":"5p.m-6p.m",
                   "count":15,
                     "date":day,
-                   "dayOfWeek":dayOfWeek
+                   "dayOfWeek":dayOfWeek,
+                  //  "users":[]
                 },
             ]
             //  console.log("additionalInfo",additionalInfo)
@@ -98,6 +103,7 @@ const Month = () => {
       const firsDay = sixDays[0] 
       setCurrentDay(firsDay)
       setHighlight(firsDay)
+      dispatch(setSlot(firsDay))
 
       // console.log("sixdays",firsDay)
       

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {useSelector,useDispatch} from 'react-redux'
 import { setBooked } from '../../Features/Booked';
+import { addBooking, isBooked } from '../../Features/User';
 
 
 function Example({show,setShow}) {
@@ -16,8 +17,9 @@ function Example({show,setShow}) {
   const {id,timings,dayOfWeek,date,count}= booking
 
   const handleSubmit =(booked)=>{
-
+    // console.log("booked",booked)
     dispatch(setBooked(booked))
+    dispatch(addBooking(booked))
     setShow(false);
 
   }
@@ -26,22 +28,47 @@ function Example({show,setShow}) {
   return (
     <>
       
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
         <Modal.Title>Session Booking</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Do you Confirm about to book a sessions at {timings}.</p>
-          <p>Available Seats {count}</p>
+          {
+            booking.hasOwnProperty('AlreadyBooked')? (
+              <>
+              <p>{booking.AlreadyBooked}</p>
+              <p>Do you want to cancel it</p>
+              </>
+              ) :
+              (
+                <>
+                 <p>Do you Confirm about to book a sessions at {timings}.</p>
+                 <p>Available Seats {count}</p>
+                </>
+              )
+          }
+         
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSubmit.bind(this,booking)}>
+          {
+            !booking.hasOwnProperty('AlreadyBooked') ? 
+            (
+              <Button variant="primary" onClick={handleSubmit.bind(this,booking)}>
+              Save Changes
+            </Button>
+            ) :
+            (
+              <Button variant="primary" onClick={handleSubmit.bind(this,booking)}>
+              Cancel
+              </Button>
+            )
+          }
+          {/* <Button variant="primary" onClick={handleSubmit.bind(this,booking)}>
             Save Changes
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
     </>
