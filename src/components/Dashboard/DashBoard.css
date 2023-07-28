@@ -1,0 +1,32 @@
+.DashBoardMainClass{
+    margin-left:15%;
+    display: flex;
+    width:85%;
+    float:left;
+    min-height: 100vh;
+    position:absolute;
+}
+.SlotContainer{
+   
+    width: 48%;
+    height:50vh;
+    float:right;
+    overflow-y: scroll;
+    /* border: 2px solid green; */
+}
+.bookedSessionContainer{
+    /* border: 2px solid red; */
+
+    height:50vh;
+    overflow: scroll;
+    width: 50%;
+}
+.savedProjectContainer{
+    bottom:0;
+    position: absolute;
+    width: 100%;
+    height:50vh;
+    overflow-x: scroll;
+
+} 
+

@@ -1,3 +1,15 @@
+.projectMainClass{
+    margin-left:15%;
+    display: flex;
+    width:85%;
+    border:2px solid red;
+    float:left;
+    min-height: 100vh;
+    position:absolute;
+}
+
+
+
 .easy{
     border:1px solid rgba(250, 172, 63, 1)!important;
 }
@@ -28,9 +40,9 @@
 }
 .challengesStyle{
     position: relative;
-    width:280px;
-    height:220px;
-    margin: 10px 20px;
+    width:400px;
+    height:400px;
+    margin: 10px 10px;
     box-shadow: 10px 10px 5px solid grey !important;
 }
 .challengesStyle Button{

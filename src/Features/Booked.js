@@ -16,18 +16,3 @@ export const BookedSlice = createSlice({
 export const { setBooked }  = BookedSlice.actions
 export default BookedSlice.reducer
 
-
-// initialState:{
-    //     value:[{
-    //         id:'',
-    //         timings:'',
-    //         dayOfWeek:'',
-    //         date:'',
-    //         count:15
-    //     }]
-    // },
-    // reducers: {
-    //             setBooked: (state, action) => {
-    //                 state.value=(action.payload) 
-    //             }
-    //         }

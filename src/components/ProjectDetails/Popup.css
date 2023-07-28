@@ -1,38 +1,34 @@
-.PopUpcontainer{
-    height:95vh !important;
-    border-top-left-radius:50px;
-    border-top-right-radius:50px;
-    display:flex;
-}
-.PopUpcontainer::-webkit-scrollbar {
-    display: none;
-}
-.PopUpcontainer {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-  }
-
 .popUpHeader{
-    height:1%;
+    height:3%;
+    width:90%;
+    margin:auto;
+    margin-top:2%;
+    color:black;
 }
+
 .popUpContent{
     display:flex;
     flex-direction:column;    
     justify-content:center;
     align-items:center;
     width:100%;
-    /* background-color:blue; */    
+    height: 80vh;
     text-align: justify;
-   
+
+}
+.PopUpContent2{
+    padding:20px 0px;
+    padding-right:70px;
+    padding-left:20px;
+    width:60%
 }
 .main{
     display:flex;
-    /* background-color:pink; */ 
 }
 
-.PopupImg,.PopUpContent{
-   height:90vh;
-   
+
+.PopupImg{
+   height:80vh;
 }
 
 .PopupImg{
@@ -45,6 +41,7 @@
 .pImg{
     width:550px;
     height:75vh;
+    filter:contrast(120%);
 }
 .PopUpContent{
     width:60%;   
@@ -59,6 +56,10 @@
 .popUpMainTitle{
     margin:20px 0px;
     display:inline-block;
+    color: #000;
+font-size: 32px;
+font-family: Source Serif Pro;
+font-weight: 600;
 }
 .muted{
     margin-left:2%;
@@ -72,16 +73,29 @@
     
 }
  .myButton{
-    background-color: rgb(235, 178, 188) !important;
+    background-color: rgba(248, 192, 0, 0.2) !important;
     color:black !important;
     border:none;
+    font-size: 24px;
+    font-family: Source Serif Pro;
+    font-weight: 600;
    
     font-weight:600 !important;
 }
 .saveBtn{
     padding:15px 30px;
     color:black !important;
+    font-size: 24px;
+    font-family: Source Serif Pro;
+    font-weight: 600;
     font-weight:600 !important
+}
+.month{
+    color: #000;
+font-size: 20px;
+font-family: Source Serif Pro;
+font-weight: 300;
+margin-left:10px;
 }
 .dataDescription{
 font-family: 'Source Serif Pro';
@@ -91,6 +105,9 @@ font-size: 25px;
 line-height: 35px;
 text-indent:50px;
 font-weight:500 !important;
+color: #000;
+font-size: 20px;
+font-family: Source Serif Pro;
 }
 .DetailedImage{
     display:grid;
@@ -99,12 +116,32 @@ font-weight:500 !important;
     gap:30px;
     
     
-    /* padding:0px 30px; */
+}
+
+.inspirations{
+    color: #000;
+font-size: 32px;
+font-family: Source Serif Pro;
+font-weight: 600;
+}
+.wpast{
+    /* border:2px solid red; */
+    /* margin-top:10%; */
+    padding:30px 0px;
+
+
 }
 .setDiv{
-    /* width:200px; */
-    height:180px;
+    height:220px;
     border:2px solid grey;
     border-radius: 10px;
 }
-
+.toYellow{
+    background-color:#ffc107;
+}
+.highlightYellow{
+    background-color:#ffc107; 
+}
+.popUpHeader closeButton{
+    color:purple !important;
+}

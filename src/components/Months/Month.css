@@ -1,12 +1,19 @@
-.new{
-    margin-left:10%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 5px 39px;
-    overflow-x:scroll;   
-    height:150px;
-    
+
+@media only screen and (max-width:480px){
+    .new{
+        border:2px solid red;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px 19px;
+        overflow-x:scroll;   
+        height:150px;
+        height:100%;
+        margin-bottom:20%;
+        /* border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding-top:20px; */
+        
 }
 .new::-webkit-scrollbar {
     display: none;
@@ -16,22 +23,34 @@
     scrollbar-width: none;  
   }
 .myMon{
+
     display: flex;
     flex-direction: row;
-    width:100vh;
+    /* width:100vh; */
+    width:100%;
     gap:10px;
-    
 }
 
 .monthBtn{ 
+
     color: black !important;
-    padding:5px 40px !important;    
+    padding:5px 20px !important; 
+    font-size:18px;   
     font-weight: 500 !important;
+    border:none !important;
 }
 
-
+.monthBtn:last-child{
+    margin-right:2px;
+}
 .high{
-    background-color:#ffc107;
-    color: black !important;
-    padding:5px 40px !important;
+    background-color:#4E176C !important;
+    color: white !important;
+    padding:10px 20px !important;
+} 
+.weekButton{
+    
 }
+
+}
+  

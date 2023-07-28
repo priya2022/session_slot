@@ -1,0 +1,103 @@
+.listingMainClass{
+    margin-left:15%;
+    display: flex;
+    width:85%;
+    float:left;
+    min-height: 100vh;
+    position:absolute;
+    /* border:2px solid rgb(216, 71, 45); */
+}
+ .myListingcontainer{
+    width:58% !important;
+    /* border:2px solid green; */
+    min-height: 100vh;
+    background-color: #F6F6F6;
+    position: relative;
+    flex: 1;
+}
+/* 
+.myListingcontainer{
+    width:58%;
+    float:left;
+    background-color: #F6F6F6;
+    /* min-height: 100vh; */
+    /* position: -webkit-fixed;
+} */ 
+
+
+.myCard{      
+    width:90%;
+    margin:5%;
+    height:278px !important;
+    background-color: #FFFFFF !important;
+    box-shadow:10px 10px 10px rgba(128, 128, 128, 0.171);
+    padding:18px;
+    color:black !important;
+    height: 280px;
+    /* border:2px solid red; */
+    
+}
+
+.mainCardImage{
+    width:28%;
+    height:86%;
+    margin-top:19px;
+    padding-left:15px;
+}
+.mainCardImage .cardimg{
+    width:100%;
+    height:100%;
+    filter:contrast(129%);
+    object-fit: cover;
+}
+.cardBody{
+    box-sizing: border-box;
+    padding:40px 12px !important;
+    padding-right:40px !important;
+    padding-left:10px;
+    top:0;
+    position:absolute;
+    right:0;
+    height:100%;
+    float:right !important;
+    width: 70%;
+    margin-left:auto;
+}
+
+.cardTitle{
+    color: #000;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 600;
+    }
+
+.cardText{
+    font-size:20px;    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify !important;
+    text-overflow: ellipsis;
+    margin-top:19px;
+}
+
+
+.text{
+    display: flex;
+    justify-content:space-between;
+    color:black !important;
+    margin-top:30px;
+}
+
+.bi-arrow-right-short{
+  
+    border-radius:100%;
+    border: none !important;;
+    font-size:25px;
+
+}
+.MonthDay{
+    color:rgba(78, 23, 108, 1);
+    font-weight: bold;
+} 

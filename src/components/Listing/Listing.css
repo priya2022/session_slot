@@ -1,70 +1,77 @@
 
-.myListingcontainer{
-    width:50%;
-    float:left;
-    margin-right:1%;
-    background-color: #F6F6F6;
-    min-height: 100vh;
-    
-    
-}
 
-.text{
-    display: flex;
-    justify-content:space-between;
-    color:black !important;
-}
+@media only screen and (max-width:480px){
+    body{
+        background-color: rgba(237, 217, 247, 1) !important;
+    }
+    
+    .listingMainClass{
+        margin-left:0;
+        width:100%;
+        
+        
+    }
+    .myCardContainer{      
+        width:90%;
+        padding:0;
+        margin:auto;
+        height:150px;
+        background-color:white;
+        margin:5%;
+       
+    }
+    .cardWrapper{
+        width: 100%;
+        height:100%;
+        
 
-.bi-arrow-right-short{
+    }
+    .cardLeft{
+        
+        width: 60%;
+        font-weight:700;
+        font-size:18px;
+       
+        height:100%;
+        float:left;
+    }
+    .cardLeftText{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        line-height: 40px;
+        height:100%;
+        justify-content: center;
+    }
+    .cardRight{
+        width: 40%;
+       font-size:18px;
+        height:100%;
+        float:right;
+        
+        
+
+    }
+    .cardRightText{
+        height:100%;
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
   
-    border-radius:100%;
-    border: none !important;;
-    font-size:25px;
+    .monthButton{
+        color:white;
+        font-weight: 700;
+        font-size:16px;
+        padding:13px 25px;
+        background-color:#4E176C;
+        border:none;
 
-}
-
-
-
-
-.myCard{      
-    width:90%;
-    margin:5%;
-    height:278px !important;
-    background-color: #FFFFFF !important;
-    box-shadow:10px 10px 10px rgba(128, 128, 128, 0.171);
-    padding:18px;
-    color:black !important;
-}
-
-.cardBody{
-    padding:40px !important;
-    top:0;
-    position:absolute;
-    right:0;
-    float:right !important;
-    width: 70%;
-    margin-left:auto;
+    }
     
     
-}
-.cardText{
-    font-size:20px;    
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-      
-}
-.cardimg{
-    width:30%;
-    height:88%;
-    margin-top:19px;
-    padding-left:15px;
-    font-size:2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* padding:20px 0px 20px 20px; */
-
+    
+   
+    
 }

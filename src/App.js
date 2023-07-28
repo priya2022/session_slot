@@ -1,7 +1,12 @@
 import React from 'react'
-import Month from './components/Months/Month'
 import Weeks from './components/Months/Weeks'
 import Home from './components/Home/Home'
+import Form from './components/Admin/StudentForm/ScheduleStudent/Form'
+import AdminMain from './components/Admin/AdminMain'
+import styled from 'styled-components'
+import Details from './components/UserDetails/Details'
+
+
 
 
 
@@ -11,8 +16,13 @@ const App = () => {
 
     
     <div>
-    <Home />    
-    <Weeks />
+    {/* <Details />
+
+       <Weeks /> 
+       <Home />  */}
+
+    <AdminMain />
+    
     </div>
     </>
   )

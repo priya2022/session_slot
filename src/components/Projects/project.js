@@ -2,216 +2,75 @@ import React, { useState } from 'react'
 import { Button,Card } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Hard from './Hard';
-import Medium from './Medium';
-import Easy from './Easy';
 import './Challenge.css'
+import Home from '../Home/Home'
 
-const ChallengeLevels = [
-    {
-        id:1,
-        level:"Easy",
-        rounds:[
-            {
-                id:1,
-                level:"Easy"
-            },
-            {
-                id:2,
-                level:"Easy"
-            },
-            {
-                id:3,
-                level:"Easy"
-            },
-            {
-                id:4,
-                level:"Easy"
-            },
-            {
-                id:5,
-                level:"Easy"
-            },
-            {
-                id:6,
-                level:"Easy"
-            },
-        ]
-    },
-    {
-        id:2,
-        level:"Medium",
-        rounds:[
-            {
-                id:1,
-                level:"Medium"
-            },
-            {
-                id:2,
-                level:"Medium"
-            },
-            {
-                id:3,
-                level:"Medium"
-            },
-            {
-                id:4,
-                level:"Medium"
-            },
-            {
-                id:5,
-                level:"Medium"
-            },
-            {
-                id:6,
-                level:"Medium"
-            },
-        ]
-    },
-    {
-        id:3,
-        level:"Hard",
-        rounds:[
-            {
-                id:1,
-                level:"Hard"
-            },
-            {
-                id:2,
-                level:"Hard"
-            },
-            {
-                id:3,
-                level:"Hard"
-            },
-            {
-                id:4,
-                level:"Hard"
-            },
-            {
-                id:5,
-                level:"Hard"
-            },
-            {
-                id:6,
-                level:"Hard"
-            },
-        ]
-        
-    }
-]
+import { useDispatch, useSelector } from 'react-redux';
 
-    
+
+import { toSetProject } from '../../Features/Projects/setProjects';
+import ChallengeLevels from './ChallengeLevel'
+import Details from '../ProjectDetails/Details'
+
+
   
- 
-
 const Challenge = () => {
-    const [levels,setlevels]= useState(ChallengeLevels)
-    const [selected,setSelected] = useState(null)
-    const [selectedButton,setSelectedButton] = useState(null)
 
-    const handleChange=(level)=>{
-        setSelected(level)
-        setSelectedButton(level)
+    const [show, setShow] = useState(false); 
+
+
+    // const project = useSelector(state=> state.project.value)
+    const dispatch= useDispatch()
+
+    const handleProjectClick=(data)=>{
+        console.log("item",data)
+        dispatch(toSetProject(data))
+        setShow(true)
     }
+  
+    return (
+        <>
+      <div>
+        <Home />
 
-   
-
-    const renderComponent = ()=>{
-
-         if(selected ==="Easy" )
-        {
-            return <Easy level={selectedButton} data={levels}/>
-        }
-       
-        else if(selected ==="Medium")
-        {
-            return <Medium level={selectedButton} data={levels}/>
-        }
-        else if(selected === "Hard")
-        {
-            return <Hard level={selectedButton} data={levels} />
-        }
-    }
-
-    const getButtonVariant =(level)=>{
-        if(level === "hard")
-        {
-            return "outline-danger"
-        }
-        else if(level === "medium")
-        {
-            return "outline-primary"
-        }
-        else if(level === "easy")
-        {
-            return "outline-warning"
-        }
-    }
-
-   
-
-      const getColumnClassName = (level, index) => {
-        if (level === 'Easy' && index === 0) {
-          return 'col-easy';
-        } else if (level === 'Medium' && index === 1) {
-          return 'col-medium';
-        } else if (level === 'Hard' && index === 2) {
-          return 'col-hard';
-        }
-        return '';
-      };
-      
-  return (
-    <div>
+        <div className="projectMainClass">
         
-        {levels.map(level => {
-            return(
-                <>
-                <Button className = {`${level.level.toLowerCase()} general`} key={level.id} onClick={handleChange.bind(this,level.level)}>
-                {level.level}
-                </Button>
-                </>
-                
-            )          
-        })}
-
+          {ChallengeLevels.map((level, index) => (
+            <div key={index}>
+              <h2>{level.projects}</h2>
+              
+              <Row>   
                 {
-                    selected ? (renderComponent()) : ( 
-                        
-                        levels.map(level => {
+                   
+                    level.rounds.map(item=>{
                         return(
-                            <>     
-                           
-                                <Row>
-                                {levels.map((level, index) => (
-                                    <Col className={getColumnClassName(level.level, index)} key={level.id}>
-                                    {level.rounds.map((item) => (
-                                        <Card className="challengesStyle" key={item.id}>
-                                        <Card.Body>
-                                            <Button className={`${level.level.toUpperCase()} ChallButton`}>
-                                            {item.level}
-                                            </Button>
-                                        </Card.Body>
-                                        </Card>
-                                    ))}
-                                    </Col>
-                                ))}
-
-                                
-                                </Row> 
-
-                                
-                            
-                            </>
-                            
-                        )          
+                            <Col md={4} key={index} onClick={handleProjectClick.bind(this,item)}>
+                            <Card className="challengesStyle" key={item.id}>
+                            <Card.Body>
+                                <Card.Title style={{textAlign: 'center'}}>{item.title}</Card.Title>
+                                <Button variant="outline-warning" >
+                                {item.title}
+                                </Button>
+                            </Card.Body>
+                            </Card>
+                            </Col>
+                        )
                     })
-                    )
+                    
                 }
- 
-    </div>
-  )
-}
-
-export default Challenge
+               </Row>
+             
+              
+            </div>
+          ))}
+         
+        </div>
+      </div>
+                {
+                    show && <Details show={show} setShow ={setShow}/>
+                }
+      </>
+    );
+  };
+  
+  export default Challenge;

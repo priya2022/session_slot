@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import './Login.css'
 import { login, logout } from '../../../Features/User';
 import {useDispatch, useSelector} from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -12,17 +13,27 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const navigate = useNavigate()
+
   // const user = useSelector(state=> state.user.value)
 
   const handleSubmit = (e) => {
-    let id=0;
-    id= id+1
+    
     e.preventDefault();
-    dispatch(login({email,password,id}))
-    // Perform login logic here, such as making an API request
-    console.log('Email:', email);
-    console.log('id:', id);
-    console.log('Password:', password);
+    
+    axios.post("https://codelabs-server.el.r.appspot.com/v1/auth/login",{
+      email:email,
+      password:password
+    })
+    .then((response)=>{
+      
+      console.log("Response",response.data)
+      dispatch(login({email,password}))
+      
+
+    })
+    .catch((error)=>{
+      console.error('Error:', error);
+    })
     navigate('/')
   };
 
@@ -31,7 +42,6 @@ const Login = () => {
     dispatch(logout())
   }
 
-  
 
   return (
     <>

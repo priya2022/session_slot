@@ -5,7 +5,27 @@ import SlotList from '../Listing/SlotList';
 import './Month.css'
 import { setSlot } from '../../Features/PerDaySlot';
 import { useSelector,useDispatch } from 'react-redux';
+import styled from 'styled-components'
 export const MonthContext = createContext()
+
+
+
+const StyledButton = styled(Button)`
+    display:flex;
+    flex-direction:column;
+    padding:2rem;
+    align-items:center;
+    justify-content:center;
+
+    .wdate{
+      font-size:2rem;
+    }
+    @media only screen and (max-width:480px){
+      
+    }
+
+
+`
 
 const initialMonth = [
   "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
@@ -16,10 +36,9 @@ const Month = () => {
     const [nextSixDays, setNextSixDays] = useState([]);
     const [perDay,setPerDay]=useState([])
     const [highlight,setHighlight] = useState('')
-  const [days, setDays] = useState([]);
-  const [currentDay,setCurrentDay ] =useState([])
-
-  const dispatch = useDispatch()
+    const [days, setDays] = useState([]);
+    const [currentDay,setCurrentDay ] =useState([])
+    const dispatch = useDispatch()
 
 
   const [mynewMonth,setmyMonth]= useState(initialMonth)
@@ -34,53 +53,59 @@ const Month = () => {
       setmyMonth(current)
         const tempNextSixDays = [];
         let count = 0;
+        // const defaultMorningHour = 11;
+        // const defaultEveningHour = 15;
+
         while (tempNextSixDays.length < 6) {
           const nextDay = new Date(today.getTime() + count * 24 * 60 * 60 * 1000);
           const day = nextDay.getDate();
-          const dayOfWeek = nextDay.toLocaleString('en-US', { weekday: 'long' });
-          if (nextDay.getDay() !== 0) {
+
+          // const morningSessionDate = new Date(nextDay);
+          // morningSessionDate.setHours(defaultMorningHour);
+          // const morningSessionFormattedDate = morningSessionDate.toLocaleDateString('en-US', {
+          //   year: 'numeric',
+          //   month: 'short',
+          //   day: 'numeric',
+          // });
+    
+          // const eveningSessionDate = new Date(nextDay);
+          // eveningSessionDate.setHours(defaultEveningHour);
+          // const eveningSessionFormattedDate = eveningSessionDate.toLocaleDateString('en-US', {
+          //   year: 'numeric',
+          //   month: 'short',
+          //   day: 'numeric',
+          // });
+          // console.log("morningSessionFormattedDate",morningSessionFormattedDate.getTime())
+
+          const dayOfWeek = nextDay.toLocaleString('en-US', { weekday: 'short' });
+          if (nextDay.getDay() !== 0 && nextDay.getDay() !== 6 ) {
             
             const additionalInfo =[
                 {
                   "id":"1",
-                  "timings":"10a.m-11a.m",
+                  "timings":"11AM-1PM",
                   "count":15,
                    "date":day,
+                   "session":'Morning Session',
                    "dayOfWeek":dayOfWeek,
+                   "booked":false
+                   
+                  //  "bookedDate":morningSessionFormattedDate
                   //  "users":[]
                 },
-                {
-                  "id":"2",
-                  "timings":"11a.m-12p.m",
-                  "count":15,
-                    "date":day,
-                   "dayOfWeek":dayOfWeek,
-                  //  "users":[]
-                },
-                {
-                  "id":"3",
-                  "timings":"3p.m-4p.m",
-                  "count":15,
-                    "date":day,
-                   "dayOfWeek":dayOfWeek,
-                  //  "users":[]
-                },
-                {
-                  "id":"4",
-                  "timings":"4p.m-5p.m",
-                  "count":15,
-                    "date":day,
-                   "dayOfWeek":dayOfWeek,
-                  //  "users":[]
-                },
-                {
-                  "id":"5",
-                  "timings":"5p.m-6p.m",
-                  "count":15,
-                    "date":day,
-                   "dayOfWeek":dayOfWeek,
-                  //  "users":[]
-                },
+                // {
+                //   "id":"2",
+                //   "timings":"3PM-6PM",
+                //   "count":15,
+                //     "date":day,
+                //     "session":'Evening Session',
+                //     "dayOfWeek":dayOfWeek,
+                //     // "bookedDate":eveningSessionFormattedDate
+
+
+                //   //  "users":[]
+                // },
+              
             ]
             //  console.log("additionalInfo",additionalInfo)
 
@@ -90,6 +115,7 @@ const Month = () => {
           count++;
         }
         setNextSixDays(tempNextSixDays);
+      
        
       }, []);
 
@@ -149,6 +175,8 @@ const Month = () => {
         return (
           <MonthContext.Provider value={myMonthData}>
           <div>
+            
+     <SlotList perDaySlot = {perDay} currentDay={currentDay} /> 
 
            <div className="new">      
      <div className= "myMon"  gap={2} style={{"marginTop":"3%"}}>
@@ -156,16 +184,28 @@ const Month = () => {
             <div key={index}>
               {/* {console.log("additional",additionalInfoGroup)}
               {console.log("highlight",highlight)} */}
-         <Button className={`monthBtn ${highlight === additionalInfoGroup ? 'high' : ''}`} variant="outline-warning" onClick={handleButtonClick.bind(this,additionalInfoGroup)} >
-            {additionalInfoGroup[0].dayOfWeek}
+
+
+              <weekwrapper> 
+         <StyledButton className={`monthBtn ${highlight === additionalInfoGroup ? 'high' : ''}`} variant="outline-warning" onClick={handleButtonClick.bind(this,additionalInfoGroup)} >
+         
+            <div className="wWeek">{additionalInfoGroup[0].dayOfWeek}</div>
+            <div className='wdate'>{additionalInfoGroup[0].date}</div>
+            <div className="weekButton">
+              
+            </div>
+
+
+           
              
-        </Button>
+        </StyledButton>
+        </weekwrapper>
+
             </div>
           ))}
           </div>
 
       </div> 
-     <SlotList perDaySlot = {perDay} currentDay={currentDay} /> 
 
         </div>
         </MonthContext.Provider>

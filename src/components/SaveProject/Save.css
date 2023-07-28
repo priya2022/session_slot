@@ -1,0 +1,31 @@
+.saveRow{
+    margin-left:15%;
+    width:85%;
+}
+.savCol{
+    display:flex;
+    margin:20px;
+
+}
+.saveCard{
+    width:370px;
+    height:500px;
+    position:relative;
+    margin:2%;
+}
+.saveBody{
+    width:90%;
+    height: 90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+.saveImg{
+    width:100%;
+    height:80%;
+    margin-left: auto;
+    filter:contrast(120%);
+    position:relative;
+}
+.saveTitle{
+    text-align:center;
+}

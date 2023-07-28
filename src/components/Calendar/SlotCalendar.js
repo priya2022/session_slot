@@ -33,27 +33,30 @@ const Cal=()=> {
 
     <div className='monthdisplay'>                 
     <h4 className="calHead"> {mynewMonth} 2023</h4>
-     
-   
   </div> 
-  <ul>
-      <li>Sun</li>
-      <li>Mon</li>
-      <li>Tue</li>
-      <li>Wed</li>
-      <li>Thu</li>
-      <li>Fri</li>
-      <li>Sat</li>
+
+  <div className="mainContent">
+
+  <ul className="weeks">
+      <li className="weekDays">Sun</li>
+      <li className="weekDays">Mon</li>
+      <li className="weekDays">Tue</li>
+      <li className="weekDays">Wed</li>
+      <li className="weekDays">Thu</li>
+      <li className="weekDays">Fri</li>
+      <li className="weekDays">Sat</li>
     </ul>
-  <div className="myCalendarcontainer">
+
+    <div className="calendar">
+
 
 {monthDays.map((day, index) => {
-  
+  let className = 'calendar-day';
   const isBooked =bookedDates.includes(day)
   
   
     return (
-      <div >
+      <div className={className}>
           <div key={index} className={isBooked? 'highlight':''}>
         {day}
       </div>
@@ -61,6 +64,7 @@ const Cal=()=> {
       
     );
   })}
+    </div> 
       </div> 
       </div>
       <BookedSession />

@@ -1,0 +1,86 @@
+mediaScreen
+
+
+@media only screen and (max-width: 400px) {
+    body{
+        background-color: rgb(22, 182, 56);
+        font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+  .listingMainClass{
+    
+    margin-top:-20px;
+    width:65%;
+    float:left;    
+    position:absolute;
+    /* border:10px solid rgb(232, 248, 3); */
+}
+ .myListingcontainer{
+    /* width:58% !important; */
+    border:2px solid green;
+    background-color: #5c0909;
+    position: relative;
+    /* flex: 1; */
+}
+  .cardimg {
+    font-size: 12px;
+     /* Adjust font size for .cardimg on smaller screens */
+    
+  }
+
+  .cardBody {
+    font-size: 12px; /* Adjust font size for .cardBody on smaller screens */
+  }
+  
+.myCard{      
+    
+    margin:5%;
+    height:220px !important;
+    background-color: #FFFFFF !important;
+    box-shadow:10px 10px 10px rgba(128, 128, 128, 0.171);
+    padding:18px;
+    color:black !important;
+    height: 250px;
+    /* border:2px solid red; */
+    
+}
+.cardBody{
+    border:2px solid blue;
+    height:100%;
+    width: 100%;
+    /* display: flex; */
+    /* align-items:center; */
+    /* justify-content: center; */
+    /* display:none; */
+    /* margin-top:20% */
+}
+.timings{
+    white-space: nowrap;
+    font-size:17px;
+    text-align: center;
+    margin-top:12px;
+}
+.monthBtn{
+    white-space: nowrap;
+    padding:2px 2px !important;
+    font-size:15px;
+}
+
+.mainCardImage{
+    margin-top:-1px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left:-2px;
+    /* border:2px solid red; */
+    width: 100%;
+    height: 10%;
+}
+.mainCardImage .cardimg{
+    font-size:18px;
+    
+}
+.listCardTitle{
+    font-size:18px;
+}
+
+} */
+

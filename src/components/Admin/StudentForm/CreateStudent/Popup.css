@@ -1,0 +1,202 @@
+/* .popUpHeader{
+    height:3%;
+    width:90%;
+    margin:auto;
+    margin-top:2%;
+    color:black;
+}
+
+.popUpContent{
+    /* display:flex;
+    flex-direction:column;    
+    justify-content:center; */
+    /* align-items:center; */
+    /* width:100%;
+    height: 100vh;
+    text-align: justify;
+
+} */
+
+body{
+    width:100vw;
+    min-height: 100vh;
+
+    background-color:#F6F6F6;
+
+
+}
+
+.PopUpContent2{
+    padding:20px 0px;
+    padding-right:70px;
+    padding-left:20px;
+    width:60%
+} */
+.main{
+    display:flex;
+}
+
+.CardWrapper{
+    width:85%;
+    /* background-color: #F6F6F6; */
+    height: 100vh;
+    display:flex;
+    float:right;
+    position:absolute;
+    margin-left:15%;
+    
+
+    
+}
+.sfCard{
+    width:100%;
+    justify-content: center;
+    
+    margin:auto;
+    /* height:100%;    */
+    /* display: flex; */
+    border:none !important;
+    
+}
+.cardRow{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.stForm{
+    /* width:100%;
+    margin:auto;
+    height:100%; */
+    max-height:100%;
+    width:80%;
+    margin:auto;
+    
+   
+}
+
+.PopupImg{
+   height:80vh;
+}
+
+.PopupImg{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:40%;
+   
+}
+.pImg{
+    width:550px;
+    height:75vh;
+    filter:contrast(120%);
+}
+.PopUpContent{
+    width:60%;   
+    padding:0px 30px;
+    padding-top:3%;
+    margin-right:3%;
+    
+}
+.popUpTitle{
+    margin:12px 0px;
+}
+.popUpMainTitle{
+    margin:20px 0px;
+    display:inline-block;
+    color: #000;
+font-size: 32px;
+font-family: Source Serif Pro;
+font-weight: 600;
+}
+.muted{
+    margin-left:2%;
+    font-size:20px;
+    
+}
+.popUpButton{
+    display:flex;
+    justify-content:space-between;
+    margin:12px 0px;
+    
+}
+ .myButton{
+    background-color: rgba(248, 192, 0, 0.2) !important;
+    color:black !important;
+    border:none;
+    font-size: 24px;
+    font-family: Source Serif Pro;
+    font-weight: 600;
+   
+    font-weight:600 !important;
+}
+.saveBtn{
+    padding:15px 30px;
+    color:black !important;
+    font-size: 24px;
+    font-family: Source Serif Pro;
+    font-weight: 600;
+    font-weight:600 !important
+}
+.month{
+    color: #000;
+font-size: 20px;
+font-family: Source Serif Pro;
+font-weight: 300;
+margin-left:10px;
+}
+.dataDescription{
+font-family: 'Source Serif Pro';
+font-style: normal;
+font-weight: 400 !important;
+font-size: 25px;
+line-height: 35px;
+text-indent:50px;
+font-weight:500 !important;
+color: #000;
+font-size: 20px;
+font-family: Source Serif Pro;
+}
+.DetailedImage{
+    display:grid;
+    grid-template-rows: 2;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    
+    
+}
+
+.inspirations{
+    color: #000;
+font-size: 32px;
+font-family: Source Serif Pro;
+font-weight: 600;
+}
+.wpast{
+    /* border:2px solid red; */
+    /* margin-top:10%; */
+    padding:30px 0px;
+
+
+}
+.setDiv{
+    height:220px;
+    border:2px solid grey;
+    border-radius: 10px;
+}
+.toYellow{
+    background-color:#ffc107;
+}
+.highlightYellow{
+    background-color:#ffc107; 
+}
+.popUpHeader closeButton{
+    color:purple !important;
+}
+.buttonSubmit{
+    display: block;
+    
+}
+.btnSubmit{
+    width:66%;
+    /* margin-left:17%; */
+}

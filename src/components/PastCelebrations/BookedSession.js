@@ -9,6 +9,7 @@ const BookedSession = () => {
 
   return (
     <>
+    <div className="wrapperPast">
     {/* {console.log("bookedSession",bookedSessions)} */}
       <h2 className="pheading">Booked Session</h2>
      { bookedSessions.map((item,index) => {
@@ -18,16 +19,20 @@ const BookedSession = () => {
                 <Link to ={`/${item.id}`} className="pastLink">
             <div className="pastCel">
   
-              <div className="imgDiv ForAlign">
-              <h6>{item.date} {item.dayOfWeek}</h6>
+              <div className="imgDiv ForAlign celebrityBox">
+                <div className="imgBox">
+                    <h6>{item.date} {item.dayOfWeek}</h6>
+                </div>
               </div>
   
-              <div className='ForAlign celebTitle'>
+              <div className='ForAlign celebTitle celebrityBox '>
               <h6>{item.timings}</h6>
               </div>
   
-              <div className='ForAlign celebLink'>
-              <i class="bi bi-chevron-right alignCelebLink"></i>
+              <div className='ForAlign celebLink celebrityBox'>
+                  <div className="celebrityBox2">
+                   <i class="bi bi-chevron-right alignCelebLink"></i>
+              </div>
               </div>
   
             </div>
@@ -37,7 +42,7 @@ const BookedSession = () => {
         // return item.id ? <div key={index}>{item.timings}</div> : null;
        
       })}
-      
+      </div>
     </>
   );
 };

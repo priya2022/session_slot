@@ -1,0 +1,23 @@
+.adminPage{
+    width:100vw;
+    min-height: 100vh;
+
+    /* background-image: linear-gradient(to right, rgba(122,215,240,255),
+    rgba(146,223,243,255),
+    rgba(183,233,247,255),
+    rgba(219,243,250,255)
+    ); */
+
+}
+/* .adLeft{
+    width:15%;
+    height: 100vh;
+    float:left;
+} */
+.adRight{
+    width:85%;
+    height: 100vh;
+    float: right;
+
+
+}

@@ -1,0 +1,111 @@
+/* .llistingMainClass{
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    float:left;
+    height: 50vh;
+    /* overflow: scroll; */
+    /* position:absolute; */
+/* } */
+ /* .lmyListingcontainer{
+    width:100% !important;
+    min-height: 50vh;
+    position: relative;
+    flex: 1;
+    background-color: blue;
+}
+.sCardWrapper{
+    width:100%;
+    height: 20%;
+    height:100%; */
+/* } */
+/* 
+.ltext{
+    /* display: flex; */
+    /* justify-content:space-between;
+    color:black !important;
+    margin-top:30px;
+}
+
+.lbi-arrow-right-short{
+  
+    border-radius:100%;
+    border: none !important;;
+    font-size:25px;
+
+}
+.lMonthDay{
+    color:rgba(78, 23, 108, 1);
+    font-weight: bold;
+}
+
+.lmyCard{      
+    width:40%;
+    margin:5%;
+    height:278px !important;
+    box-shadow:10px 10px 10px rgba(128, 128, 128, 0.171);
+    padding:18px;
+    color:black !important;
+    height: 280px;
+    background-color: pink;
+}
+
+.lmainCardImage{
+    width:28%;
+    height:86%;
+    margin-top:19px;
+    padding-left:15px;
+}
+.lmainCardImage .lcardimg{
+    width:100%;
+    height:100%;
+    filter:contrast(129%);
+    object-fit: cover;
+}
+.lcardBody{
+    box-sizing: border-box;
+    padding:40px 12px !important;
+    padding-right:40px !important;
+    padding-left:10px;
+    top:0;
+    position:absolute;
+    right:0;
+    height:100%;
+    float:right !important;
+    width: 70%;
+    margin-left:auto;
+}
+
+.lcardTitle{
+    color: #000;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 600;
+    }
+
+.lcardText{
+    font-size:20px;    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify !important;
+    text-overflow: ellipsis;
+    margin-top:19px;
+} */ 
+/* 
+.icon{
+    width:32px;
+    height:32px;
+    border-radius:100%;
+    background-color:gold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.icon:hover{
+    box-shadow:2px 2px 4px  grey;
+    border-radius:100%;
+    transform:scale(1.1)
+    } */
